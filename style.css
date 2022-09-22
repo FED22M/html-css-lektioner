@@ -1,0 +1,122 @@
+/* man kan lägga till, importera, externa css filer */
+@import "header.css";
+
+/* man kan style på element, .class, #id */
+h1 {
+  color: red;
+  font-size: 11px;
+}
+
+.main-nav {
+  width: 100%;
+  height: 60px;
+  background-color: darkgrey;
+}
+
+#footerdel {
+  background-color: darkslategray;
+  color: aquamarine;
+  margin-top: 400px;
+}
+
+/* stylar man en container, ex body eller main nedan, så ärvs stylingen neråt. Så länge det inte finns något mer specifik styling på element längre ner i hierarkin. */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkgreen;
+}
+
+main {
+    font-size: 1.3rem;
+    color: black;
+    border-bottom: 10px solid forestgreen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ /* Nedan är en kortform på de efterföljande 4 padding-reglerna. */
+  padding: 10px 20px 15px;
+
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
+  /* och detta är en kortform för nedan 3 border */
+    border: 1px dotted #333;
+
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #333;
+}
+
+
+/* <a> taggar kan stylas olika för besökta och icke bestöka länkar. Använd då :link och :visited.
+I annat fall räcker bara a.
+
+a{}
+a:link {color: black;}
+a:visited {}
+a:hover {
+    background-color: #333;
+    color: #fff;
+}
+a:active {
+    background-color: forestgreen;
+    color: #fff;
+}
+a:hover:after {
+    content: '➡';
+}*/
+
+/* styling för ett element (.p) inuti ett annat (.p-wrap) */
+.p-wrap .p {
+  color: blueviolet;
+}
+
+/* styling för två olika element, separeres med comma */
+.card,
+.p-wrap {
+}
+
+/* stylinge för ett element med två klasser
+    (man måste inte style på alla klasserna */
+.card.alert {
+  background-color: red;
+  padding: 20em;
+}
+
+.wrapper {
+  display: flex;
+  background-color: blue;
+}
+.procent {
+    /* med calc() kan vi göra beräkningar, för ex. en bredd. */
+  width: calc(100% - 200px);
+}
+.pixels,
+.baraendiv {
+  background-color: black;
+  width: 200px;
+}
+
+
+main ~ p {
+    background-color: chartreuse;
+}
+
+p:not(.private){
+    text-decoration: underline;
+}
+
+/* Media Query - läs mer på:
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
+@media print and (min-width: 900px) {
+  body {
+    background-color: darkkhaki;
+  }
+}

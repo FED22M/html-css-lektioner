@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulär</title>
+</head>
+
+<body>
+
+    <form action="" method="post">
+        <label for="firstname">Förnamn</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Kalle" />
+
+        <label>
+            <span>Efternamn</span>
+            <input type="text" name="surname" required />
+        </label>
+
+        <div>
+            <label>
+                <span>Epost</span>
+                <input type="email" name="email" value="mikko@exaple.test" readonly />
+            </label>
+        </div>
+
+        <label>Beskrivning
+            <textarea name="description"></textarea>
+        </label>
+
+        <div>
+            <label>Email<input type="radio" name="contact" value="email" checked /></label>
+            <label>Telefon<input type="radio" name="contact" value="phone" /></label>
+        </div>
+
+        <div>
+            <label>FED22<input type="checkbox" name="course-name" value="fed22" checked /></label>
+            <label>FED21<input type="checkbox" name="course-name" value="fed21" /></label>
+        </div>
+
+        <div>
+
+            <select name="selected-course">
+                <option value="fed21">Fed21</option>
+                <option value="fed22" selected>Fed22</option>
+                <option value="fed23">Fed23</option>
+            </select>
+        </div>
+
+        <div>
+            <select name="pets" multiple>
+                <optgroup label="house pets">
+                    <option>Dog</option>
+                    <option>Lizard</option>
+                    <option>Cat</option>
+                </optgroup>
+                <optgroup label="Flying">
+                    <option>Birds</option>
+                    <option>Lizards</option>
+                    <option>Dragons</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <input type="hidden" name="userID" value="55" />
+
+        <button type="submit">Skicka</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+
+</html>
