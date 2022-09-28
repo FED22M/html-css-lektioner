@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Not responsive demo</title>
+    <style>
+        @import body>* {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            background-color: gray;
+        }
+
+        body {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        header {
+            background: url(responsive_images/header.jpg) no-repeat center;
+            height: 200px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .image_wrap {
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .image_wrap {
+                width: 480px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>My website</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget venenatis
+                ligula. Ut lacinia at dolor vitae pulvinar. Aliquam pretium dignissim eros. Integer
+                faucibus, dui non aliquet bibendum, lectus orci lobortis odio, ornare porttitor est
+                tellus eget velit. Nulla eros elit, malesuada id neque vel, viverra vehicula neque.
+                Nullam auctor turpis non leo iaculis finibus. Quisque blandit arcu venenatis libero
+                tempor, ac pulvinar ligula dapibus.</p>
+
+            <figure>
+                <img src="responsive_images/elva-800w.jpg"
+                    alt="Chris standing up holding his daughter Elva">
+                <figcaption>Chris standing up holding his daughter Elva</figcaption>
+            </figure>
+
+            <p>Suspendisse potenti. Ut in luctus eros. Mauris pulvinar vehicula aliquet. Etiam
+                imperdiet eleifend luctus. Duis ut justo nec eros ornare consectetur. Vestibulum
+                convallis condimentum varius. Maecenas rutrum porta varius. Phasellus volutpat sem
+                id sagittis luctus. Morbi vitae quam vitae nisi iaculis dignissim.</p>
+            <div class="image_wrap">
+                <img srcset="responsive_images/elva-fairy-480w.jpg 480w,
+                     responsive_images/elva-fairy-800w.jpg 800w" sizes="(max-width: 600px) 480px,
+                    800px" src="responsive_images/elva-fairy-480w.jpg"
+                    alt="Elva dressed as a fairy">
+            </div>
+
+            <p>Header image originally by <a
+                    href="https://www.flickr.com/photos/miwok/17086751527/">Miwok</a>.</p>
+        </section>
+    </main>
+
+    <picture>
+        <source type="image/webp" srcset="mypicture.webp" media="(min-width: 800px)" />
+        <source type="image/webp" srcset="mypicture.jpg" />
+
+
+        <img src="" allt="" />
+    </picture>
+</body>
+
+</html>
